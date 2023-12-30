@@ -9,10 +9,10 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 Environment=RUST_BACKTRACE=1
 Environment=RUST_LOG=info
 ExecStart=/usr/local/bin/ord \
-  --bitcoin-data-dir /var/lib/bitcoind \
+  --bitcoin-data-dir /7t/blockchain/bitcoin/node \
   --chain ${CHAIN} \
-  --config-dir /var/lib/ord \
-  --data-dir /var/lib/ord \
+  --config-dir /7t/blockchain/bitcoin/ord \
+  --data-dir /7t/blockchain/bitcoin/ord \
   --index-runes \
   --index-sats \
   --index-transactions \
@@ -36,7 +36,7 @@ StateDirectoryMode=0700
 TimeoutStopSec=10m
 Type=simple
 User=ord
-WorkingDirectory=/var/lib/ord
+WorkingDirectory=/7t/blockchain/bitcoin/ord
 
 [Install]
 WantedBy=multi-user.target
